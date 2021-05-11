@@ -1,0 +1,4 @@
+services:
+  plugin.manager.cloud_services:
+    class: Drupal\cloud_services\CloudServicesPluginManager
+    parent: default_plugin_manager

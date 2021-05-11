@@ -1,0 +1,4 @@
+administer cloud_services configuration:
+  title: 'Administer cloud_services configuration'
+  description: 'Optional description.'
+  restrict access: true

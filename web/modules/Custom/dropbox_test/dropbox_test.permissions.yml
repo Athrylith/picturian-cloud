@@ -1,0 +1,4 @@
+administer dropbox_test configuration:
+  title: 'Administer dropbox_test configuration'
+  description: 'Optional description.'
+  restrict access: true

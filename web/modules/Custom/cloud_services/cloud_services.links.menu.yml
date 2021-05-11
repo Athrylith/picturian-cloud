@@ -1,0 +1,6 @@
+cloud_services.settings_form:
+  title: Cloud Services
+  description: Configure Cloud Services.
+  parent: system.admin_config_system
+  route_name: cloud_services.settings_form
+  weight: 10

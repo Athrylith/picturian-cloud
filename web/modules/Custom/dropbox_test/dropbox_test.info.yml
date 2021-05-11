@@ -1,0 +1,6 @@
+name: dropbox test
+type: module
+description: Initial test of the dropbox api
+package: picturian
+core: 8.x
+core_version_requirement: ^8 || ^9

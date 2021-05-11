@@ -1,0 +1,15 @@
+dropbox_test.example:
+  path: '/dropbox-test/example'
+  defaults:
+    _title: 'Example'
+    _controller: '\Drupal\dropbox_test\Controller\DropboxTestController::build'
+  requirements:
+    _permission: 'access content'
+
+dropbox_test.settings_form:
+  path: '/admin/config/system/dropbox-test'
+  defaults:
+    _title: 'dropbox test settings'
+    _form: 'Drupal\dropbox_test\Form\SettingsForm'
+  requirements:
+    _permission: 'administer dropbox_test configuration'

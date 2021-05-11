@@ -1,0 +1,6 @@
+services:
+  dropbox_test.event_subscriber:
+    class: Drupal\dropbox_test\EventSubscriber\DropboxTestSubscriber
+    arguments: ['@messenger']
+    tags:
+      - { name: event_subscriber }

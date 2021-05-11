@@ -1,0 +1,15 @@
+cloud_services.example:
+  path: '/cloud-services/example'
+  defaults:
+    _title: 'Example'
+    _controller: '\Drupal\cloud_services\Controller\CloudServicesController::build'
+  requirements:
+    _permission: 'access content'
+
+cloud_services.settings_form:
+  path: '/admin/config/system/cloud-services'
+  defaults:
+    _title: 'Cloud Services settings'
+    _form: 'Drupal\cloud_services\Form\SettingsForm'
+  requirements:
+    _permission: 'administer cloud_services configuration'
