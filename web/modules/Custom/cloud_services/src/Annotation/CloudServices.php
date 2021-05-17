@@ -1,11 +1,13 @@
 <?php
 
-namespace Drupal\cloud_services\Annotation;
+namespace Drupal\products\Annotation;
 
 use Drupal\Component\Annotation\Plugin;
 
 /**
- * Defines cloud_services annotation object.
+ * Defines an  item annotation object.
+ *
+ * @see \Drupal\products\Plugin\Manager
  *
  * @Annotation
  */
@@ -19,21 +21,12 @@ class CloudServices extends Plugin {
   public $id;
 
   /**
-   * The human-readable name of the plugin.
+   * The label of the plugin.
    *
    * @var \Drupal\Core\Annotation\Translation
    *
    * @ingroup plugin_translatable
    */
-  public $title;
-
-  /**
-   * The description of the plugin.
-   *
-   * @var \Drupal\Core\Annotation\Translation
-   *
-   * @ingroup plugin_translatable
-   */
-  public $description;
+  public $label;
 
 }

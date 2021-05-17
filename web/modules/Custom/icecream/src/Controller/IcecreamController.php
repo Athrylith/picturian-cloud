@@ -21,14 +21,24 @@ class IcecreamController extends ControllerBase implements ContainerInjectionInt
 
     $manager = \Drupal::service('plugin.manager.icecream');
     $plugins = $manager->getDefinitions();
-    drupal_set_message(print_r($plugins, TRUE));
+
+    foreach ($plugins as $plugin) {
+      \Drupal::messenger()->addMessage($plugin);
+    }
 
     foreach ($plugins as $flavor) {
       $instance = $manager->createInstance($flavor['id']);
-      $build[] = array(
+      $build[] = [
         '#type' => 'markup',
-        '#markup' => t('<p>Flavor @name, cost $@price.</p>', array('@name' => $instance->getName(), '@price' => $instance->getPrice())),
-      );
+        '#markup' => t(
+          '<p>Flavor @name, Cost $@price, Slogan @slogan.</p>',
+          [
+            '@name' => $instance->getName(),
+            '@price' => $instance->getPrice(),
+            '@slogan' => $instance->slogan()
+          ]
+        ),
+      ];
     }
 
     return $build;

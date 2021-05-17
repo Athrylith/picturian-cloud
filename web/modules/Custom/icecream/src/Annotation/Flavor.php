@@ -44,4 +44,6 @@ class Flavor extends Plugin {
    */
   public $price;
 
+  public $slogan;
+
 }
